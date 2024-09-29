@@ -1,4 +1,5 @@
 from django.db import models
+from django.core.validators import MinValueValidator
 
 # Create your models here.
 
@@ -19,6 +20,21 @@ class BaseDocs(models.Model):
     
     # Definir INICIO_VIGENCIA
     INICIO_VIGENCIA = models.DateField(null=True, blank=True)
+    
+    # Definir FIN_VIGENCIA
+    INICIO_VIGENCIA = models.DateField(
+        null=True, 
+        blank=True,
+        default=None
+    )
+    
+    # Definir VERSION
+    VERSION = models.IntegerField(
+        default=1,
+        validators=[
+            MinValueValidator(1)
+        ]
+    )
 
     def __str__(self):
         return self.DOCUMENTO
