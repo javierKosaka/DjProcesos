@@ -7,4 +7,5 @@ app_name = 'StoreDocs'
 urlpatterns = [
     path('ListadoDocumentos/', views.ListadoDocumentos, name='ListadoDocumentos'),
     path('CrearDocumentos/', views.CrearDocumentos, name='CrearDocumentos'),
+    path('DetalleDocumentos/<int:pk>', views.DetalleDocumentos, name='DetalleDocumentos'),
 ]

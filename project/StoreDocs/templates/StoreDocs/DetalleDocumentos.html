@@ -1,0 +1,16 @@
+{% extends 'core/base.html' %}
+
+{% load custom_filters %}
+
+{% block main %}
+    <div class="container mt-5">
+        <h1>Detalle de documento</h1>
+        <ul>
+          <li>Nombre del documento: {{object.DOCUMENTO}}</li>
+          <li>Version: {{object.VERSION}}</li>
+          <li>Tipo de documento: {{object.TIPO_DOCUMENTO}}</li>
+          <li>Descripcion: {{object.DESCRIPCION}}</li>
+        </ul>
+        
+    </div>
+{% endblock main %}

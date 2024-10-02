@@ -9,11 +9,12 @@ class BaseDocs(models.Model):
     
     # Definir TIPO_DOCUMENTO (limitar a opciones validadas)
     TIPO_DOCUMENTO_OPCIONES = [
-        ('MANUAL DE PROCESOS', 'Manual de procesos'),
-        ('PROCEDIMIENTO', 'Procedimiento'),
-        ('FORMULARIO', 'Formularios')
+        ('01. MANUAL DE PROCESOS', 'Manual de procesos'),
+        ('02. PROCEDIMIENTO', 'Procedimiento'),
+        ('03. FORMULARIO', 'Formularios')
     ]
     TIPO_DOCUMENTO = models.CharField(max_length=30, choices=TIPO_DOCUMENTO_OPCIONES)
+
     
     # Definir DESCRIPCION
     DESCRIPCION = models.TextField(null=True, blank=True)

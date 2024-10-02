@@ -19,7 +19,7 @@
                         <td>{{ documento.DOCUMENTO }}</td>
                         <td>{{ documento.TIPO_DOCUMENTO}}</td>
                         <td>{{ documento.INICIO_VIGENCIA}}</td>
-                        <td class="text-center"><button>Ver</button></td>
+                        <td class="text-center"><a href="{% url 'StoreDocs:DetalleDocumentos' documento.id %}"><button>Ver</button></a></td>
                     </tr>
                 {% endfor %}
             </tbody>

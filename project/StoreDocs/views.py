@@ -18,6 +18,12 @@ def CrearDocumentos(request):
             form.save()
             return redirect("StoreDocs:ListadoDocumentos")
     return render(request, "StoreDocs/CrearDocumentos.html", {"form" : form})
+
+
+def DetalleDocumentos(request, pk: int):
+    query = BaseDocs.objects.get(id=pk)
+    context = {'object' : query}
+    return render(request, "StoreDocs/DetalleDocumentos.html", context)
     
 
 
