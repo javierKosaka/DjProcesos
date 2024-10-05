@@ -10,7 +10,7 @@
                     <th scope="col">Nombre del documento</th>
                     <th scope="col">Tipo de documento</th>
                     <th scope="col">Entrada en vigencia</th>
-                    <th scope="col" class="text-center">Detalle</th>
+                    <th scope="col" class="text-center">Acciones</th>
                 </tr>
             </thead>
             <tbody>
@@ -19,7 +19,9 @@
                         <td>{{ documento.DOCUMENTO }}</td>
                         <td>{{ documento.TIPO_DOCUMENTO}}</td>
                         <td>{{ documento.INICIO_VIGENCIA}}</td>
-                        <td class="text-center"><a href="{% url 'StoreDocs:DetalleDocumentos' documento.id %}"><button>Ver</button></a></td>
+                        <td class="text-center"><a href="{% url 'StoreDocs:DetalleDocumentos' documento.id %}"><button>Detalle</button></a></td>
+                        <td class="text-center"><a href="{% url 'StoreDocs:UpdateDocumentos' documento.id %}"><button>Modificar</button></a></td>
+                        <td class="text-center"><a href="{% url 'StoreDocs:DeleteDocumentos' documento.id %}"><button>Borrar</button></a></td>
                     </tr>
                 {% endfor %}
             </tbody>

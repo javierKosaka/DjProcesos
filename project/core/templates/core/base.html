@@ -8,7 +8,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
             <div class="container-fluid">
               <a class="navbar-brand" href="#">Organismo</a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -23,14 +23,19 @@
               </div>
             </div>
           </nav>
+          <br>
+          <br>
+        {% block header %}
+
+        {% endblock header %}
     </header>
-    <main>
+    <main class="mb-5">
         {% block main %}
             
         {% endblock main %}
     </main>
-    <footer class="container">
-        <div class="bg-info text-center text-lg-start fixed-bottom">ORGANISMO</div> 
+    <footer class="text-end fixed-bottom">
+        <div class="bg-info  p-2">ORGANISMO</div> 
     </footer>
 </body>
 </html>

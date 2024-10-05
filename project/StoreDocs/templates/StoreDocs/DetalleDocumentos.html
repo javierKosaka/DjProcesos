@@ -5,12 +5,13 @@
 {% block main %}
     <div class="container mt-5">
         <h1>Detalle de documento</h1>
-        <ul>
-          <li>Nombre del documento: {{object.DOCUMENTO}}</li>
-          <li>Version: {{object.VERSION}}</li>
-          <li>Tipo de documento: {{object.TIPO_DOCUMENTO}}</li>
-          <li>Descripcion: {{object.DESCRIPCION}}</li>
+        <ul class="list-group mt-5">
+          <li class="list-group-item"><strong>Nombre del documento:</strong> {{object.DOCUMENTO}}</li>
+          <li class="list-group-item"><strong>Version:</strong> {{object.VERSION}}</li>
+          <li class="list-group-item"><strong>Tipo de documento:</strong> {{object.TIPO_DOCUMENTO}}</li>
+          <li class="list-group-item"><strong>Descripcion:</strong> {{object.DESCRIPCION}}</li>
         </ul>
-        
+        <a class="btn btn-secondary mt-5" href="{% url 'StoreDocs:ListadoDocumentos' %}">Volver</a>
     </div>
+
 {% endblock main %}

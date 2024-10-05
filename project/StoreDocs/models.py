@@ -23,7 +23,7 @@ class BaseDocs(models.Model):
     INICIO_VIGENCIA = models.DateField(null=True, blank=True)
     
     # Definir FIN_VIGENCIA
-    INICIO_VIGENCIA = models.DateField(
+    FIN_VIGENCIA = models.DateTimeField(
         null=True, 
         blank=True,
         default=None
